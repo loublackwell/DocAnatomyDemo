@@ -17,48 +17,40 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 | Ministry of Healing | E.G. White | Health Sciences |
 | The Great Controversy | E.G. White | Theology |
 
-**Sample Cross-Disciplinary Queries**:
-```python
-"Explain Turing's arguments about machine consciousness"
-"Compare Sun Tzu's strategies to modern cybersecurity principles"
-"What health guidelines from Ministry of Healing remain relevant today?"
-```
-## 🖼️ Application Screenshots
+## 🖥️ Core Interface
 
 <div align="center">
-
-### Main Search Interface  
-<img src="images/search-ui.png" width="80%" alt="Full app interface with query box and results panel">
-<em>Natural language search across document collections</em>
-
-### Turing Paper Query Example
-<img src="images/app_querying.png" width="80%" alt="Sample query about Turing's Computing Machinery and Intelligence">  
-<em>Retrieving precise answers from technical papers</em>
-
-### Re-indexing Controls
-<img src="images/reindexing.png" width="40%" alt="Sidebar showing chunk size sliders and file selection">
-<em>Adjust document processing parameters in real-time</em>
-
+  <img src="images/search-ui.png" width="85%" alt="Main application interface showing query and results">
+  <p><em>Search across documents with natural language queries</em></p>
 </div>
 
+## 🔍 Sample Query: Turing's Paper
+
+<div align="center">
+  <img src="images/app_querying.png" width="85%" alt="Example query showing technical answer extraction">
+  <p><em>Precise answers with source citations</em></p>
+  
+  **Try This**:  
+  `"How does Turing respond to the 'mathematical objection' to machine intelligence?"`
+</div>
+
+## ⚙️ Configuration Panel
+
+<div align="center">
+  <img src="images/reindexing.png" width="50%" alt="Document processing parameters">
+  <p><em>Optimize retrieval with live parameter adjustment</em></p>
+  
+  **Key Settings**:
+  - Chunk Size: 128-1024 characters  
+  - Overlap: 10-25% of chunk size  
+  - Top-K Results: 3-10 documents  
+</div>
 
 ## Features
+[Rest of your features section...]
 
-
-- **Document Intelligence**: 
-  - PDF parsing with configurable chunking (128-1024 chars)
-  - Semantic search powered by FAISS
-  - Metadata-preserving processing pipeline
-
-- **AI Integration**:
-  - Gemini 2.0 Flash for RAG responses
-  - Hallucination-resistant output formatting
-  - Context-aware summarization
-
-- **Operational Tools**:
-  - Dynamic re-indexing
-  - Performance statistics tracking
-  - Sample document suite for testing
+## Quick Start
+[Your existing quick start guide...]
 
 ## Quick Start
 
