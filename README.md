@@ -22,7 +22,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 "Explain Turing's arguments about machine consciousness"
 "Compare Sun Tzu's strategies to modern cybersecurity principles"
 "What health guidelines from Ministry of Healing remain relevant today?"
-
+```
 ## 🖼️ Application Screenshots
 
 <div align="center">
