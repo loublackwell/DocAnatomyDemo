@@ -46,11 +46,24 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   - Top-K Results: 3-10 documents  
 </div>
 
-## Features
-[Rest of your features section...]
 
-## Quick Start
-[Your existing quick start guide...]
+## Features
+
+
+- **Document Intelligence**: 
+  - PDF parsing with configurable chunking (128-1024 chars)
+  - Semantic search powered by FAISS
+  - Metadata-preserving processing pipeline
+
+- **AI Integration**:
+  - Gemini 2.0 Flash for RAG responses
+  - Hallucination-resistant output formatting
+  - Context-aware summarization
+
+- **Operational Tools**:
+  - Dynamic re-indexing
+  - Performance statistics tracking
+  - Sample document suite for testing
 
 ## Quick Start
 
