@@ -24,6 +24,7 @@ current_year=$(date +'%Y')
 if [ $((current_year - publication_year)) -ge 95 ]; then
   echo "Likely public domain in US"
 fi
+```
 
 ## Features
 
