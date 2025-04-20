@@ -74,7 +74,7 @@ def index_embeddings(embeddings, ids, record_dict, file_name):
     
     return index, metadata_store
 
-def query_faiss_index(file_base, query, top_k):
+def query_faiss_index(embedding_model,file_base, query, top_k):
     #Query Faiss index given as input the base filename,query and the number of result to return.
     """
     Returns a list of dictionaries with complete metadata for each result
@@ -134,7 +134,7 @@ def query_faiss_index(file_base, query, top_k):
         return []
       
 
-def index_folder(all_files, chunk_size, chunk_overlap):
+def index_folder(embedding_model,all_files, chunk_size, chunk_overlap):
     # Index folder of pdf files
     for file in all_files:
         file_type = file.split(".")[-1]
@@ -364,7 +364,7 @@ def main():
         
 
     # Query section (optional, depending on the rest of your UI)
-    st.title("PDF Indexing and Querying")
+    st.title("PDF Indexing and RAG Querying")
     query = st.text_input("Enter your query:")
     
     if query:
@@ -372,7 +372,7 @@ def main():
         text_dict={}
         # Here you can call the query function with the selected file
         st.write(f"Querying {selected_file}.pdf with your input: {query}")
-        results = query_faiss_index(selected_file,query, top_k) #file_base: str, query: str, top_k: int = 5
+        results = query_faiss_index(embedding_model,selected_file,query, top_k) #file_base: str, query: str, top_k: int = 5
         #st.write(results[0])
         
         #Display results

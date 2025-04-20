@@ -7,24 +7,40 @@
 
 ## 📚 Project Description
 
-DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transforms document collections into queryable knowledge bases. The application includes **a curated library of public domain works** for legal experimentation and analysis:
+DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transforms document collections into queryable knowledge bases. The application includes a curated library of public domain texts across multiple disciplines:
 
-### Public Domain Text Library
-| Title | Author | Year | Domain | PD Status |
-|-------|--------|------|--------|-----------|
-| [Computing Machinery and Intelligence](https://www.csee.umbc.edu/courses/471/papers/turing.pdf) | A.M. Turing | 1950 | Computer Science | [PD worldwide](https://commons.wikimedia.org/wiki/File:On_Computable_Numbers,_with_an_Application_to_the_Entscheidungsproblem.pdf) |
-| The Art of War | Sun Tzu | 5th c. BCE | Military Strategy | [PD by age](https://en.wikipedia.org/wiki/The_Art_of_War#Copyright_status) |
-| Ministry of Healing | E.G. White | 1905 | Health Sciences | [PD in US](https://copyright.cornell.edu/publicdomain) |
-| The Great Controversy | E.G. White | 1888 | Theology | [PD in US](https://copyright.cornell.edu/publicdomain) |
+### Included Public Domain Texts
+| Title | Author | Domain |
+|-------|--------|--------|
+| Computing Machinery and Intelligence | A.M. Turing | Computer Science |
+| The Art of War | Sun Tzu | Military Strategy |
+| Ministry of Healing | E.G. White | Health Sciences |
+| The Great Controversy | E.G. White | Theology |
 
-**Public Domain Verification**:
-```bash
-# Copyright status check (US)
-current_year=$(date +'%Y')
-if [ $((current_year - publication_year)) -ge 95 ]; then
-  echo "Likely public domain in US"
-fi
-```
+**Sample Cross-Disciplinary Queries**:
+```python
+"Explain Turing's arguments about machine consciousness"
+"Compare Sun Tzu's strategies to modern cybersecurity principles"
+"What health guidelines from Ministry of Healing remain relevant today?"
+
+## 🖼️ Application Screenshots
+
+<div align="center">
+
+### Re-indexing Controls
+<img src="images/reindexing.png" width="80%" alt="Sidebar showing chunk size sliders and file selection">
+<em>Adjust document processing parameters in real-time</em>
+
+### Main Search Interface  
+<img src="images/search_ui.png" width="80%" alt="Full app interface with query box and results panel">
+<em>Natural language search across document collections</em>
+
+### Turing Paper Query Example
+<img src="images/app_querying.png" width="80%" alt="Sample query about Turing's Computing Machinery and Intelligence">  
+<em>Retrieving precise answers from technical papers</em>
+
+</div>
+
 
 ## Features
 
