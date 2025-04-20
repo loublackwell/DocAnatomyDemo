@@ -1,0 +1,22 @@
+{
+  "The_Great_Controversy.pdf": {
+    "chunk": 384,
+    "overlap": 30
+  },
+  "The_Ministry_of_Healing.pdf": {
+    "chunk": 512,
+    "overlap": 50
+  },
+  "Relativity.pdf": {
+    "chunk": 512,
+    "overlap": 50
+  },
+  "The_Art_Of_War.pdf": {
+    "chunk": 512,
+    "overlap": 50
+  },
+  "Turing.pdf": {
+    "chunk": 512,
+    "overlap": 50
+  }
+}
