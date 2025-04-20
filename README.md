@@ -27,13 +27,13 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 
 <div align="center">
 
-### Re-indexing Controls
-<img src="images/reindexing.png" width="80%" alt="Sidebar showing chunk size sliders and file selection">
-<em>Adjust document processing parameters in real-time</em>
-
 ### Main Search Interface  
-<img src="images/search_ui.png" width="80%" alt="Full app interface with query box and results panel">
+<img src="images/search-ui.png" width="80%" alt="Full app interface with query box and results panel">
 <em>Natural language search across document collections</em>
+
+### Re-indexing Controls
+<img src="images/reindexing.png" width="40%" alt="Sidebar showing chunk size sliders and file selection">
+<em>Adjust document processing parameters in real-time</em>
 
 ### Turing Paper Query Example
 <img src="images/app_querying.png" width="80%" alt="Sample query about Turing's Computing Machinery and Intelligence">  
