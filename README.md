@@ -4,7 +4,23 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io)
 
+## 📚 Project Description
+
+DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transforms document collections into queryable knowledge bases. The application:
+
+- **Processes** PDFs and other documents into searchable chunks
+- **Understands** questions using semantic search (FAISS + Sentence Transformers)
+- **Answers** with verified, context-rich responses (Gemini AI)
+- **Learns** through configurable chunking and re-indexing
+
+**Perfect for**:
+- Research literature analysis
+- Technical manual Q&A
+- Cross-document knowledge discovery
+- Educational material exploration
+
 ## Features
+
 
 - **Document Intelligence**: 
   - PDF parsing with configurable chunking (128-1024 chars)
