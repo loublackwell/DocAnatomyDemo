@@ -102,7 +102,7 @@ planned_integrations = {
         "Chart data parsing", 
         "Audio transcription indexing"
     ]
-}
+}```
 
 
 ## 💬 Contact Lewis Blackwell
