@@ -103,7 +103,7 @@ planned_integrations = {
         "Audio transcription indexing"
     ]
 }
-```
+
 
 ## 💬 Contact Lewis Blackwell
 

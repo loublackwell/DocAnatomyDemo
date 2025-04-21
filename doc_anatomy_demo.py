@@ -11,11 +11,11 @@ from llama_index.core.node_parser import SimpleNodeParser
 from google import genai
 
 #Initialization of varibales
-global my_key
+#global my_key
 cwd = os.getcwd()  # Current working directory
 PDF = os.path.join(cwd, "PDF")  # List of pdf files
 chunk_file=os.path.join(cwd,"chunk_stats.json")#file containing the chunk and overl size metadata for each file
-my_key=""#Add your Gemni API key here
+#my_key=""#Add your Gemni API key here
 
 def llama_simple_reader(path):
     #Read PDF file
