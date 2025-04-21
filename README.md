@@ -84,6 +84,27 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+## 🚀 Future Roadmap
+
+### Core Improvements
+| Priority | Feature | Description |
+|----------|---------|-------------|
+| 🔴 High | **Text Cleaning Pipeline** | Advanced preprocessing for encoding issues (UTF-8 normalization, OCR artifact removal) |
+| 🟠 Medium | **RAG Evaluation Suite** | Metrics for retrieval accuracy (Precision@K, MRR) and answer faithfulness |
+| 🟢 Low | **Document Upload** | Drag-and-drop interface for user-provided PDFs |
+
+### Extended Capabilities  
+```python
+planned_integrations = {
+    "file_types": ["json", "csv", "docx", "pptx"],
+    "multimodal": [
+        "Image OCR extraction",
+        "Chart data parsing", 
+        "Audio transcription indexing"
+    ]
+}
+```
+
 ## 💬 Contact Lewis Blackwell
 
 <div align="center" style="margin: 1.5rem 0;">
