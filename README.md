@@ -82,7 +82,7 @@ pip install -r requirements.txt
 
 # 4. Launch application
 streamlit run main.py
-
+```
 
 ## 💬 Contact Lewis Blackwell
 
