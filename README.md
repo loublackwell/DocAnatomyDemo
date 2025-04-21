@@ -93,17 +93,21 @@ streamlit run main.py
 | 🟠 Medium | **RAG Evaluation Suite** | Metrics for retrieval accuracy (Precision@K, MRR) and answer faithfulness |
 | 🟢 Low | **Document Upload** | Drag-and-drop interface for user-provided PDFs |
 
-### Extended Capabilities  
-```python
-planned_integrations = {
-    "file_types": ["json", "csv", "docx", "pptx"],
-    "multimodal": [
-        "Image OCR extraction",
-        "Chart data parsing", 
-        "Audio transcription indexing"
-    ]
-}
-```
+
+### Extended Capabilities
+
+**Planned Integrations:**
+
+- **File Types:**
+  - json
+  - csv
+  - docx
+  - pptx
+- **Multimodal:**
+  - Image OCR extraction
+  - Chart data parsing
+  - Audio transcription indexing
+
 
 ## 💬 Contact Lewis Blackwell
 
