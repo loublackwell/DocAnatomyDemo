@@ -82,3 +82,18 @@ pip install -r requirements.txt
 
 # 4. Launch application
 streamlit run main.py
+
+
+## 💬 Contact Lewis Blackwell
+
+<div align="center" style="margin: 1.5rem 0;">
+
+[![Email](https://img.shields.io/badge/📧_Email-leblackwell.nlp@gmail.com-2CA5E0?logo=gmail&style=for-the-badge&logoColor=white)](mailto:leblackwell.nlp@gmail.com)
+[![GitHub Issues](https://img.shields.io/badge/🐞_Report_Issues-GitHub-181717?logo=github&style=for-the-badge)](https://github.com/yourusername/DocAnatomyDemo/issues)
+
+</div>
+
+**I welcome communication about**:
+- Usage questions
+- Bug reports
+- Feature suggestions

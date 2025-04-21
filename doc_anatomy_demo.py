@@ -202,8 +202,8 @@ def query_gemini(task):
     TEXT = ""
     try:
         # Pass the API key directly as a string, not as a dictionary
-        #client = genai.Client(api_key=st.secrets["API_KEY"])
-        client = genai.Client(api_key=my_key)
+        client = genai.Client(api_key=st.secrets["API_KEY"])
+        #client = genai.Client(api_key=my_key)
 
         response = client.models.generate_content(
             model="gemini-2.0-flash", contents=task
