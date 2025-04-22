@@ -9,13 +9,15 @@ from sentence_transformers import SentenceTransformer
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.node_parser import SimpleNodeParser
 from google import genai
+import json_repair
 
 #Initialization of varibales
-#global my_key
+global my_key
 cwd = os.getcwd()  # Current working directory
 PDF = os.path.join(cwd, "PDF")  # List of pdf files
 chunk_file=os.path.join(cwd,"chunk_stats.json")#file containing the chunk and overl size metadata for each file
-#my_key=""#Add your Gemni API key here
+
+my_key=""##<--- Add your Gemni API key here **
 
 def llama_simple_reader(path):
     #Read PDF file
@@ -202,8 +204,9 @@ def query_gemini(task):
     TEXT = ""
     try:
         # Pass the API key directly as a string, not as a dictionary
-        client = genai.Client(api_key=st.secrets["API_KEY"])
-        #client = genai.Client(api_key=my_key)
+        #client = genai.Client(api_key=my_key)#Only when running app on your local machine
+        
+        client = genai.Client(api_key=st.secrets["API_KEY"])#Use when running on cloud
 
         response = client.models.generate_content(
             model="gemini-2.0-flash", contents=task
@@ -272,21 +275,23 @@ def conlcusion(question, answers):
 
 
 def parse_llm(out):
-    #Parse LLM output and remove noise
-    block=""
+    #Parse LLM output and remove new lines
+    json_string=""
     out1 = str(out)            
     out2 = out1.replace("\\n", "")
     out = out2.replace("\n", "")
     start = out.find("{")
     end = out.rfind("}")
     if start and end > -1:
-        block = out[start:end+1]        
-    return block
+        json_string = out[start:end+1]
+    return json_string
 
 def display_results(out2,text_dict):
     # Display the parsed query results
     try:
-        pydict = json.loads(out2)  # Return dictionary
+        #pydict = json.loads(out2)  # Return dictionary
+        pydict= json_repair.loads(out2)#Try and repair any broken json from LLM.
+        #st.write(pydict)
         summary = pydict.get("ANSWER")
         justification = pydict.get("JUSTIFICATION")
 

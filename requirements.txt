@@ -1,18 +1,8 @@
-# Core Dependencies
-streamlit==1.44.1           # Web UI framework
-llama-index-core==0.12.31   # Document processing
-sentence-transformers==4.1.0 # Embedding model
-faiss-cpu==1.10.0           # Vector search
-google-genai==1.11.0        # Gemini API
-PyPDF2==5.4.0               # PDF parsing
-python-dotenv==1.1.0        # Environment variables
-
-# Required Runtime Dependencies
-numpy==2.2.4                # Numerical operations
-pandas==2.2.3               # Data handling
-pydantic==2.11.3            # Data validation
-httpx==0.28.1               # HTTP client
-tqdm==4.67.1                # Progress bars
-transformers==4.51.3        # NLP components
-tokenizers==0.21.1          # Text processing
-requests==2.32.3            # HTTP requests
+streamlit>=1.32.0
+numpy>=1.24.0
+pandas>=2.0.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+llama-index-core>=0.10.0
+google-generativeai>=0.3.0
+json_repair>=1.0.0
