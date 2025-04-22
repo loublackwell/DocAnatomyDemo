@@ -1,8 +1,8 @@
-streamlit>=1.32.0
-numpy>=1.24.0
-pandas>=2.0.0
-sentence-transformers>=2.2.0
-faiss-cpu>=1.7.0
-llama-index-core>=0.10.0
-google-generativeai>=0.3.0
-json_repair>=1.0.0
+streamlit
+numpy
+pandas
+sentence-transformers
+faiss-cpu
+llama-index-core
+google-generativeai
+json-repair
