@@ -17,7 +17,7 @@ cwd = os.getcwd()  # Current working directory
 PDF = os.path.join(cwd, "PDF")  # List of pdf files
 chunk_file=os.path.join(cwd,"chunk_stats.json")#file containing the chunk and overl size metadata for each file
 
-my_key="AIzaSyBOa3ayPLPLQGvKmcEd-BN2WvmD582TlUM"##<--- Add your Gemni API key here **
+my_key=""##<--- Add your Gemni API key here **
 
 def llama_simple_reader(path):
     #Read PDF file
