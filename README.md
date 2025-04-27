@@ -24,14 +24,14 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   <p><em>Search across documents with natural language queries</em></p>
 </div>
 
-## 🔍 Sample Queries you can try with the sample indexed PDF files.
 
 <div align="center">
   <img src="images/app_querying.png" width="85%">
   <p><em>Precise answers with source citations</em></p>
   
-  **Try This**:  
-  ## The Art of War (Simple RAG Questions)
+
+** 🔍 Try These Queries **:  
+## The Art of War (Simple RAG Questions)
 
 - What is "The Art of War" mainly about?
 - Why does Sun Tzu say it’s important to plan before a battle?
