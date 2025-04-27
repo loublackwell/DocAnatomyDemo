@@ -24,8 +24,14 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   <p><em>Search across documents with natural language queries</em></p>
 </div>
 
-## 🔍 Sample Queries
-## The Art of War (Simple RAG Questions)
+## 🔍 Sample Queries you can try with the sample indexed PDF files.
+
+<div align="center">
+  <img src="images/app_querying.png" width="85%" alt="Example query showing technical answer extraction">
+  <p><em>Precise answers with source citations</em></p>
+  
+  **Try This**:  
+  ## The Art of War (Simple RAG Questions)
 
 - What is "The Art of War" mainly about?
 - Why does Sun Tzu say it’s important to plan before a battle?
@@ -60,6 +66,23 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 - What are the limitations of prompt engineering mentioned in the paper?
 - How can prompt engineering reduce hallucinations in LLM outputs?
 - Why is understanding prompt behavior critical for building reliable AI applications?
+
+
+
+</div>
+
+## ⚙️ Configuration Panel
+
+<div align="center">
+  <img src="images/reindexing.png" width="50%" alt="Document processing parameters">
+  <p><em>Optimize retrieval with live parameter adjustment</em></p>
+  
+  **Key Settings**:
+  - Chunk Size: 128-1024 characters  
+  - Overlap: 10-25% of chunk size  
+  - Top-K Results: 3-10 documents  
+</div>
+
 
 ## Features
 
