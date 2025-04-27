@@ -55,7 +55,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 - What role does imitation play in Turing’s argument?
 - How has Turing’s paper influenced modern AI?
 
-### Prompt Engineering at Lee Boonstra (Google White Paper) (Sample RAG Questions)
+### Prompt Engineering by Lee Boonstra (Google White Paper) 
 
 - What is prompt engineering according to the Google white paper?
 - Why is prompt engineering important when working with LLMs?
