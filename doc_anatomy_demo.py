@@ -17,7 +17,7 @@ cwd = os.getcwd()  # Current working directory
 PDF = os.path.join(cwd, "PDF")  # List of pdf files
 chunk_file=os.path.join(cwd,"chunk_stats.json")#file containing the chunk and overl size metadata for each file
 
-my_key=""##<--- Add your Gemni API key here **
+my_key="AIzaSyBOa3ayPLPLQGvKmcEd-BN2WvmD582TlUM"##<--- Add your Gemni API key here **
 
 def llama_simple_reader(path):
     #Read PDF file
@@ -34,6 +34,8 @@ def chunk_documents(file_name, documents, path, chunk_size, chunk_overlap):
     parser = SimpleNodeParser.from_defaults(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     nodes = parser.get_nodes_from_documents(documents)
     for pos, node in enumerate(nodes):
+        file_name1=file_name.replace("-","_")#Normalize filename so that it can be used to form the id field
+        file_name=file_name1
         ID = f"{file_name}_{pos}"
         record_dict[ID] = node
     return nodes, record_dict
@@ -157,7 +159,7 @@ def index_folder(embedding_model,all_files, chunk_size, chunk_overlap):
             index, metadata_store = index_embeddings(embeddings, ids, record_dict, file_name)
 
 # Function to re-index a PDF file
-def reindex_pdf(file_name, chunk_size, chunk_overlap):
+def reindex_pdf(file_name, chunk_size, chunk_overlap,embedding_model):
     """
     Function to re-index a single PDF file with the specified chunk size and overlap.
     """
@@ -202,19 +204,20 @@ def query_gemini(task):
     # Query LLM. Takes as input the task definitiion and returns the LLM response.
     query_state = ""
     TEXT = ""
+    model_name="gemini-2.0-flash"
     try:
         # Pass the API key directly as a string, not as a dictionary
-        #client = genai.Client(api_key=my_key)#Only when running app on your local machine
+        client = genai.Client(api_key=my_key)#Only when running app on your local machine
         
-        client = genai.Client(api_key=st.secrets["API_KEY"])#Use when running on cloud
+        #client = genai.Client(api_key=st.secrets["API_KEY"])#Use when running on cloud
 
         response = client.models.generate_content(
-            model="gemini-2.0-flash", contents=task
+            model=model_name, contents=task
         )
         TEXT = str(response.text)
         # st.text(f"LLM:{TEXT}")
     except Exception as e:
-        st.write(f"Unable to query llm: {e}")
+        st.write(f"Unable to query llm. Please check network connection:  {e}")
         query_state = "error"
     return TEXT, query_state
 
@@ -288,36 +291,44 @@ def parse_llm(out):
 
 def display_results(out2,text_dict):
     # Display the parsed query results
+    page = ""
+    score = 0
+    ID=""
+    text =""
     try:
         #pydict = json.loads(out2)  # Return dictionary
         pydict= json_repair.loads(out2)#Try and repair any broken json from LLM.
-        #st.write(pydict)
+        with st.expander("JSON Output"):
+            st.write(pydict)
         summary = pydict.get("ANSWER")
         justification = pydict.get("JUSTIFICATION")
+        #st.write(f"JUSTIFICATION:{type(justification)}")
 
         # Summary
-        if summary:
+        if summary!=None:
             st.write("**AI Summary**")
             if isinstance(summary,str):
                 st.write(summary)
                 st.write("---")  # Horizontal line for separation
                 
                 # Supporting documents    
-                if isinstance(justification,list):
+                if isinstance(justification,list) and justification!=[]:
                     st.write("**Supporting Records**")
                     for doc in justification:
+                        #st.write(f"DOC:{doc}")
                         doc_metadata = doc.split("-")
+                        #st.write(doc_metadata)
                         page = doc_metadata[0]
                         score = round((float(doc_metadata[1])), 2)
                         ID=str(doc_metadata[2])
+                        #st.write(f"ID: {ID}")
                         text =text_dict[ID]#Get original text
                 
                         with st.expander(f"📄 Page {page} | Score: {score} | {text[:50]}..."):
                             st.write(f"**Page {page}** (Relevance score: {score})")
                             st.write("")  # Blank line
                             st.write(text)
-                else:
-                    st.write(f"**{pydict}")
+        
                     
             #Summary not available    
             if isinstance(summary,list):
@@ -326,7 +337,7 @@ def display_results(out2,text_dict):
             
     except Exception as e:
         pydict = {}
-        st.write(f"Error: {str(e)}")
+        #st.write(f"Error: {str(e)}")
     
 
 # Streamlit UI
@@ -360,7 +371,7 @@ def main():
     # Re-index button
     if st.sidebar.button(f"Re-index {selected_file}.pdf"):
         original_filename=f"{selected_file}.pdf"
-        reindex_pdf(selected_file, chunk_size, chunk_overlap)
+        reindex_pdf(selected_file, chunk_size, chunk_overlap,embedding_model)
         stats_dict[original_filename]={"chunk":chunk_size,"overlap":chunk_overlap}
         viewJson=json.dumps(stats_dict,indent=2,ensure_ascii=False)
         #Save updated chunk metadata
@@ -396,9 +407,10 @@ def main():
         #LLM Conclusion Task given query and list of answers--
         task=conlcusion(query,  final_list)#LLM task for determining conclusion
         out=query_gemini(task)#Query LLM
-        out=parse_llm(out)#Parse LLM results
-        out2=out.replace('\\', '\\\\')
-        display_results(out2,text_dict)
+        if out!="":
+            out=parse_llm(out)#Parse LLM results
+            out2=out.replace('\\', '\\\\')
+            display_results(out2,text_dict)
 
 
 if __name__ == "__main__":
