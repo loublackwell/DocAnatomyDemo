@@ -24,28 +24,42 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   <p><em>Search across documents with natural language queries</em></p>
 </div>
 
-## 🔍 Sample Query: Google's White paper on Prompt Engineering
+## 🔍 Sample Queries
+## The Art of War (Simple RAG Questions)
 
-<div align="center">
-  <img src="images/app_querying.png" width="85%" alt="Example query showing technical answer extraction">
-  <p><em>Precise answers with source citations</em></p>
-  
-  **Try This**:  
-  `"How does the Prompt Engineering article deal with this?'Are there any tools to fix llm output in the form of json?"`
-</div>
+- What is "The Art of War" mainly about?
+- Why does Sun Tzu say it’s important to plan before a battle?
+- What does Sun Tzu say about tricking your enemies?
+- How should a leader treat their soldiers, according to Sun Tzu?
+- What does "knowing yourself and knowing your enemy" mean?
+- Why does Sun Tzu believe it’s better to win without fighting?
+- What does Sun Tzu say about choosing the right time and place to fight?
+- How important is speed in winning a battle, according to Sun Tzu?
+- What lessons from "The Art of War" can you use in everyday life?
 
-## ⚙️ Configuration Panel
+## Computing Machinery and Intelligence (Sample RAG Questions)
 
-<div align="center">
-  <img src="images/reindexing.png" width="50%" alt="Document processing parameters">
-  <p><em>Optimize retrieval with live parameter adjustment</em></p>
-  
-  **Key Settings**:
-  - Chunk Size: 128-1024 characters  
-  - Overlap: 10-25% of chunk size  
-  - Top-K Results: 3-10 documents  
-</div>
+- What is the main question Turing asks in "Computing Machinery and Intelligence"?
+- What is the Turing Test and why is it important?
+- How does Turing address objections to machine intelligence?
+- What examples does Turing use to show that machines could think?
+- What is Turing's view on whether machines can make mistakes?
+- Why does Turing compare human learning to machine learning?
+- How does Turing respond to the idea that machines cannot have consciousness?
+- What role does imitation play in Turing’s argument?
+- How has Turing’s paper influenced modern AI?
 
+## Prompt Engineering at Lee Boonstra (Google White Paper) (Sample RAG Questions)
+
+- What is prompt engineering according to the Google white paper?
+- Why is prompt engineering important when working with LLMs?
+- What are examples of good and bad prompts?
+- How can prompt tuning improve LLM performance?
+- What strategies are recommended for designing effective prompts?
+- How does task-specific prompting differ from general prompting?
+- What are the limitations of prompt engineering mentioned in the paper?
+- How can prompt engineering reduce hallucinations in LLM outputs?
+- Why is understanding prompt behavior critical for building reliable AI applications?
 
 ## Features
 
