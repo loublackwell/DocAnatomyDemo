@@ -30,7 +30,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   <p><em>Precise answers with source citations</em></p>
   
 
-** 🔍 Try These Queries **:  
+## 🔍 Try These Queries:  
 ### The Art of War (Simple RAG Questions)
 
 - What is "The Art of War" mainly about?
