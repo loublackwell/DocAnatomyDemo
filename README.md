@@ -104,6 +104,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 
 ## Quick Start
 
+
 ```bash
 # 1. Clone and setup
 git clone https://github.com/yourusername/DocAnatomyDemo.git
@@ -117,8 +118,11 @@ source .venv/bin/activate  # Linux/Mac
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Launch application
-streamlit run main.py
+# 4. Get a Gemini API key
+# Update the script `doc_anatomy_demo.py` by setting your API key to the `my_key` variable.
+
+# 5. Launch application
+streamlit run doc_anatomy_demo.py
 ```
 
 ## 🚀 Future Roadmap
