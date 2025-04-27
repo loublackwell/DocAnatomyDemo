@@ -27,7 +27,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 ## 🔍 Sample Queries you can try with the sample indexed PDF files.
 
 <div align="center">
-  <img src="images/app_querying.png" width="85%" alt="Example query showing technical answer extraction">
+  <img src="images/app_querying.png" width="85%">
   <p><em>Precise answers with source citations</em></p>
   
   **Try This**:  
