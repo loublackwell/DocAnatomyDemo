@@ -14,8 +14,8 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 |-------|--------|--------|
 | Computing Machinery and Intelligence | A.M. Turing | Computer Science |
 | The Art of War | Sun Tzu | Military Strategy |
-| Ministry of Healing | E.G. White | Health Sciences |
-| The Great Controversy | E.G. White | Theology |
+| Prompt Engineering|Lee Boonstra|Computer Science/A.I.
+
 
 ## 🖥️ Core Interface
 
@@ -24,14 +24,14 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   <p><em>Search across documents with natural language queries</em></p>
 </div>
 
-## 🔍 Sample Query: Turing's Paper
+## 🔍 Sample Query: Google's White paper on Prompt Engineering
 
 <div align="center">
   <img src="images/app_querying.png" width="85%" alt="Example query showing technical answer extraction">
   <p><em>Precise answers with source citations</em></p>
   
   **Try This**:  
-  `"How does Turing respond to the 'mathematical objection' to machine intelligence?"`
+  `"How does the Prompt Engineering article deal with this?'Are there any tools to fix llm output in the form of json?"`
 </div>
 
 ## ⚙️ Configuration Panel
