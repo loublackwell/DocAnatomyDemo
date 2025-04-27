@@ -31,7 +31,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
   
 
 ** 🔍 Try These Queries **:  
-## The Art of War (Simple RAG Questions)
+### The Art of War (Simple RAG Questions)
 
 - What is "The Art of War" mainly about?
 - Why does Sun Tzu say it’s important to plan before a battle?
@@ -43,7 +43,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 - How important is speed in winning a battle, according to Sun Tzu?
 - What lessons from "The Art of War" can you use in everyday life?
 
-## Computing Machinery and Intelligence (Sample RAG Questions)
+### Computing Machinery and Intelligence (Sample RAG Questions)
 
 - What is the main question Turing asks in "Computing Machinery and Intelligence"?
 - What is the Turing Test and why is it important?
@@ -55,7 +55,7 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 - What role does imitation play in Turing’s argument?
 - How has Turing’s paper influenced modern AI?
 
-## Prompt Engineering at Lee Boonstra (Google White Paper) (Sample RAG Questions)
+### Prompt Engineering at Lee Boonstra (Google White Paper) (Sample RAG Questions)
 
 - What is prompt engineering according to the Google white paper?
 - Why is prompt engineering important when working with LLMs?
