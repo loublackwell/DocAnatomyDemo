@@ -22,7 +22,9 @@ DocAnatomyDemo is a **Retrieval-Augmented Generation (RAG) system** that transfo
 <div align="center">
   <img src="images/search-ui.png" width="85%" alt="Main application interface showing query and results">
   <p><em>Search across documents with natural language queries</em></p>
+  <p>Try out the live app on Hugging Face: [DocAnatomy on Hugging Face](https://huggingface.co/spaces/luckylouman/DocAnatomy)</p>
 </div>
+
 
 
 <div align="center">
